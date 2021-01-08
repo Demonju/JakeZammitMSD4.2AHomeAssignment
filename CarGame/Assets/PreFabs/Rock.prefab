@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1761129493303782232}
   - component: {fileID: 6038675181436145454}
   - component: {fileID: -3587622821718558015}
-  - component: {fileID: -5488168853245510316}
   - component: {fileID: 2001006839003273129}
   - component: {fileID: -2683311649561429146}
   - component: {fileID: -79794190350719794}
@@ -101,19 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
---- !u!114 &-5488168853245510316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660432200023350225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbeeca1049e0c2947b407ad29edb66a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleSpeed: 0.3
 --- !u!114 &2001006839003273129
 MonoBehaviour:
   m_ObjectHideFlags: 0

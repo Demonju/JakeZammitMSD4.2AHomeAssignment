@@ -114,6 +114,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleSpeed: 0.3
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  BulletPrefab: {fileID: 125498916551958093, guid: 9a6afbe4f7947db4ca460f42d6826f7d, type: 3}
+  BulletSpeed: 5
 --- !u!114 &7638908855327617319
 MonoBehaviour:
   m_ObjectHideFlags: 0
