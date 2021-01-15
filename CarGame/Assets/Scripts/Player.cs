@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 public class Player : MonoBehaviour
 {
@@ -72,7 +74,6 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer dmgDealer)
     {
         health -= dmgDealer.GetDamage();
-        //destroy enemy laser
         dmgDealer.Hit();
 
         if (health <= 0)
@@ -84,6 +85,9 @@ public class Player : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+
+        //find object of type level in the hierarchy and run the method LoadGameOver()
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
 }
