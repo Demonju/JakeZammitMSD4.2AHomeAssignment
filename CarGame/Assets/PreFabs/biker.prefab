@@ -119,6 +119,8 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   BulletPrefab: {fileID: 125498916551958093, guid: 9a6afbe4f7947db4ca460f42d6826f7d, type: 3}
   BulletSpeed: 5
+  obstacleDestroyed: {fileID: 0}
+  obstacleDestroyedVolume: 0.75
 --- !u!114 &8766326082144036062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  obstacleDestroyed: {fileID: 8300000, guid: bc908cbdca4d5b0469aef13b317918f9, type: 3}
+  obstacleDestroyedVolume: 0.34
 --- !u!70 &-9064161039938297059
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

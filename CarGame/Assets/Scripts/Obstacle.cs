@@ -15,6 +15,7 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField] float BulletSpeed = 0.3f;
 
+
     void Start()
     {
         //generate a random number

@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+  obstacleDestroyed: {fileID: 8300000, guid: bc908cbdca4d5b0469aef13b317918f9, type: 3}
+  obstacleDestroyedVolume: 0.34
 --- !u!70 &-7002848820861392920
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

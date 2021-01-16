@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     [SerializeField] float movementSpeed = 10f;
     [SerializeField] float health = 5f;
 
+    [SerializeField] AudioClip playerDestroyed;
+    [SerializeField] [Range(0, 1)] float playerDestroyedVolume = 0.75f;
+
     float xMin, xMax, yMin, yMax;
 
     float padding = 0.5f;
@@ -76,6 +79,8 @@ public class Player : MonoBehaviour
         health -= dmgDealer.GetDamage();
         dmgDealer.Hit();
 
+        AudioSource.PlayClipAtPoint(playerDestroyed, Camera.main.transform.position, playerDestroyedVolume);
+     print (health);
         if (health <= 0)
         {
             Die();
