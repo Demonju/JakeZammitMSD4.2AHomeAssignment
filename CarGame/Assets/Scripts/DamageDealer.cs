@@ -8,6 +8,9 @@ public class DamageDealer : MonoBehaviour
     [SerializeField] AudioClip obstacleDestroyed;
     [SerializeField] [Range(0, 1)] float obstacleDestroyedVolume = 0.30f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
+
     //returns the amount of damage
     public int GetDamage()
     {
@@ -19,7 +22,10 @@ public class DamageDealer : MonoBehaviour
     {
         Destroy(this.gameObject);
 
-        if(obstacleDestroyed != null)
+        if (obstacleDestroyed != null)
             AudioSource.PlayClipAtPoint(obstacleDestroyed, Camera.main.transform.position, obstacleDestroyedVolume);
+
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
     }
 }

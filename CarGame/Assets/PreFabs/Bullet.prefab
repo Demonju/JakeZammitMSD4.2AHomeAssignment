@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7287727110391819025}
   m_Layer: 9
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +100,8 @@ MonoBehaviour:
   damage: 1
   obstacleDestroyed: {fileID: 0}
   obstacleDestroyedVolume: 0.75
+  deathVFX: {fileID: 288479829794881524, guid: 149b768c125401a468e5b6a104b840d3, type: 3}
+  explosionDuration: 1
 --- !u!70 &4545370252354731935
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

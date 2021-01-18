@@ -47,4 +47,5 @@ public class Obstacle : MonoBehaviour
         //shoot laser downwards: -enemyLaserSpeed
         enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -BulletSpeed);
     }
+
 }

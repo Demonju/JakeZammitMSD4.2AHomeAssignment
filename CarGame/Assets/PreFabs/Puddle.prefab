@@ -115,6 +115,8 @@ MonoBehaviour:
   damage: 1
   obstacleDestroyed: {fileID: 8300000, guid: bc908cbdca4d5b0469aef13b317918f9, type: 3}
   obstacleDestroyedVolume: 0.34
+  deathVFX: {fileID: 288479829794881524, guid: 149b768c125401a468e5b6a104b840d3, type: 3}
+  explosionDuration: 1
 --- !u!70 &-8796654177508933398
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
