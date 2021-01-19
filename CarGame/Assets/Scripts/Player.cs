@@ -9,10 +9,12 @@ using UnityEngine.Scripting.APIUpdating;
 public class Player : MonoBehaviour
 {
     [SerializeField] float movementSpeed = 10f;
-    [SerializeField] float health = 5f;
+    [SerializeField] int health = 50;
 
     [SerializeField] AudioClip playerDestroyed;
     [SerializeField] [Range(0, 1)] float playerDestroyedVolume = 0.75f;
+
+    [SerializeField] int scoreValue = 5;
 
     float xMin, xMax, yMin, yMax;
 
@@ -28,6 +30,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     private void Boundaries()
@@ -80,7 +87,7 @@ public class Player : MonoBehaviour
         dmgDealer.Hit();
 
         AudioSource.PlayClipAtPoint(playerDestroyed, Camera.main.transform.position, playerDestroyedVolume);
-     print (health);
+     //print (health);
         if (health <= 0)
         {
             Die();
@@ -91,8 +98,15 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
 
-        //find object of type level in the hierarchy and run the method LoadGameOver()
-        FindObjectOfType<Level>().LoadGameOver();
+        if (scoreValue >= 100)
+        {
+            FindObjectOfType<Level>().LoadWinner();
+        }
+        else
+        {
+            //find object of type level in the hierarchy and run the method LoadGameOver()
+            FindObjectOfType<Level>().LoadGameOver();
+        }
     }
 
 }
